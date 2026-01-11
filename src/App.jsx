@@ -1,33 +1,33 @@
+import { useEffect, useState } from "react"
 import Navbar from "./components/Navbar"
+import AOS from 'aos'
+import "aos/dist/aos.css"
 
 function App() {
+  const [darkMode, setDarkMode] = useState(true)
+  useEffect(()=>{
+    AOS.init({
 
+      duration:1000,
+      once:false,
+      offset:100
+    });
+    document.documentElement.classList.add("dark");
+  }, []);
+
+  const toggleDarkMode=()=>{
+    const newMode = !darkMode;
+    setDarkMode(newMode);
+    document.documentElement.classList.toggle('dark');
+  };
   return (
     <>
-    <Navbar />
+    <div className={
+      darkMode?"bg-linear-to-br from-gray-900 via-[#0d182e] to-gray-950 min-h-screen":"bg-linear-to-br from-gray-50  to-blue-50 min-h-screen"
+    }></div>
+    <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
       </>
   )
 }
 
 export default App
-
-// export default function App() {
-//   return (
-//     <div className="h-screen bg-red-500 flex items-center justify-center">
-//       <h1 className="text-white text-6xl font-extrabold underline">
-//         Tailwind Fresh Install 🔥
-//       </h1>
-//     </div>
-//   )
-// }
-
-
-// export default function App() {
-//   return (
-//     <div className="h-screen bg-black flex items-center justify-center">
-//       <h1 className="text-5xl text-green-400 font-bold">
-//         Tailwind is Working 🚀
-//       </h1>
-//     </div>
-//   )
-// }
