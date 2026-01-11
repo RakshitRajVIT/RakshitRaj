@@ -5,11 +5,23 @@ function App() {
   return (
     <>
     <Navbar />
-    </>
+      </>
   )
 }
 
 export default App
+
+// export default function App() {
+//   return (
+//     <div className="h-screen bg-red-500 flex items-center justify-center">
+//       <h1 className="text-white text-6xl font-extrabold underline">
+//         Tailwind Fresh Install 🔥
+//       </h1>
+//     </div>
+//   )
+// }
+
+
 // export default function App() {
 //   return (
 //     <div className="h-screen bg-black flex items-center justify-center">
