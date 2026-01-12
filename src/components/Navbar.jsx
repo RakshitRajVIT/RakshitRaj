@@ -1,7 +1,7 @@
 import { useState } from "react"
 import { motion } from "framer-motion"
 import { darkColor, lightColor } from "../constants"
-import { Sun, Moon, X, Menu } from "lucide-react"
+import { X, Menu } from "lucide-react"
 
 // import { a } from "framer-motion/client"
 
@@ -67,7 +67,7 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
           </div>
           <div className="flex items-center space-x-2">
             {/* dark mode toggle  */}
-            <motion.button
+            {/* <motion.button
               whileHover={{ scale: 1.11 }}
               whileTap={{ scale: 0.9 }}
               onClick={toggleDarkMode}
@@ -77,7 +77,7 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
               {darkMode ? (
                 <Sun className='w-5 h-5 text-yellow-300' />
               ) : (<Moon className='w-5 h-5 text-gray-700' />)}
-            </motion.button>
+            </motion.button> */}
             {/* Resume */}
             <motion.a
               href="#contact"
