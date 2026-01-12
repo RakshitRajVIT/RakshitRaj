@@ -1,0 +1,112 @@
+{
+  "hash": "d7a21ff5",
+  "configHash": "33e770ea",
+  "lockfileHash": "26a8029e",
+  "browserHash": "82c82807",
+  "optimized": {
+    "react": {
+      "src": "../../node_modules/react/index.js",
+      "file": "react.js",
+      "fileHash": "7e62f762",
+      "needsInterop": true
+    },
+    "react-dom/client": {
+      "src": "../../node_modules/react-dom/client.js",
+      "file": "react-dom_client.js",
+      "fileHash": "54463ddd",
+      "needsInterop": true
+    },
+    "aos": {
+      "src": "../../node_modules/aos/dist/aos.js",
+      "file": "aos.js",
+      "fileHash": "6db52da2",
+      "needsInterop": true
+    },
+    "@react-three/fiber": {
+      "src": "../../node_modules/@react-three/fiber/dist/react-three-fiber.esm.js",
+      "file": "@react-three_fiber.js",
+      "fileHash": "03e4c80e",
+      "needsInterop": false
+    },
+    "@react-three/drei": {
+      "src": "../../node_modules/@react-three/drei/index.js",
+      "file": "@react-three_drei.js",
+      "fileHash": "4626d379",
+      "needsInterop": false
+    },
+    "react-responsive": {
+      "src": "../../node_modules/react-responsive/dist/esm/index.js",
+      "file": "react-responsive.js",
+      "fileHash": "7099b949",
+      "needsInterop": false
+    },
+    "maath": {
+      "src": "../../node_modules/maath/dist/maath.esm.js",
+      "file": "maath.js",
+      "fileHash": "d1b95174",
+      "needsInterop": false
+    },
+    "framer-motion": {
+      "src": "../../node_modules/framer-motion/dist/es/index.mjs",
+      "file": "framer-motion.js",
+      "fileHash": "c848c352",
+      "needsInterop": false
+    },
+    "lucide-react": {
+      "src": "../../node_modules/lucide-react/dist/esm/lucide-react.js",
+      "file": "lucide-react.js",
+      "fileHash": "6ad3ede1",
+      "needsInterop": false
+    },
+    "motion/react": {
+      "src": "../../node_modules/motion/dist/es/react.mjs",
+      "file": "motion_react.js",
+      "fileHash": "45321309",
+      "needsInterop": false
+    },
+    "tailwind-merge": {
+      "src": "../../node_modules/tailwind-merge/dist/bundle-mjs.mjs",
+      "file": "tailwind-merge.js",
+      "fileHash": "93e170a8",
+      "needsInterop": false
+    }
+  },
+  "chunks": {
+    "hls-2PAO3BKI": {
+      "file": "hls-2PAO3BKI.js"
+    },
+    "vision_bundle-TBY4AZ3O": {
+      "file": "vision_bundle-TBY4AZ3O.js"
+    },
+    "chunk-N5CSPG5O": {
+      "file": "chunk-N5CSPG5O.js"
+    },
+    "chunk-TXGQJFWJ": {
+      "file": "chunk-TXGQJFWJ.js"
+    },
+    "chunk-RBKPSGE2": {
+      "file": "chunk-RBKPSGE2.js"
+    },
+    "chunk-OFYYPCGY": {
+      "file": "chunk-OFYYPCGY.js"
+    },
+    "chunk-JBU6HCGV": {
+      "file": "chunk-JBU6HCGV.js"
+    },
+    "chunk-6YOVXODW": {
+      "file": "chunk-6YOVXODW.js"
+    },
+    "chunk-P6RTVJOB": {
+      "file": "chunk-P6RTVJOB.js"
+    },
+    "chunk-2M4ZTJBN": {
+      "file": "chunk-2M4ZTJBN.js"
+    },
+    "chunk-DXMV2PVU": {
+      "file": "chunk-DXMV2PVU.js"
+    },
+    "chunk-G3PMV62Z": {
+      "file": "chunk-G3PMV62Z.js"
+    }
+  }
+}
