@@ -1,0 +1,38 @@
+import { initializeApp } from 'firebase/app';
+import { getAuth } from 'firebase/auth';
+import { getFirestore } from 'firebase/firestore';
+import { getStorage } from 'firebase/storage';
+
+// TODO: Replace with your Firebase config from Firebase Console
+// Go to Firebase Console > Project Settings > Your apps > Web app > Config
+const firebaseConfig = {
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY || '',
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN || '',
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID || '',
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET || '',
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID || '',
+  appId: import.meta.env.VITE_FIREBASE_APP_ID || '',
+};
+
+// Check if Firebase config is properly set
+const isConfigValid = Object.values(firebaseConfig).every(value => value && value !== '' && !value.includes('placeholder'));
+
+if (!isConfigValid && typeof window !== 'undefined') {
+  console.warn('⚠️ Firebase configuration is incomplete or using placeholders.');
+  console.warn('📝 To enable admin panel:');
+  console.warn('1. Go to https://console.firebase.google.com/');
+  console.warn('2. Copy your Firebase config from Project Settings > Your apps > Web');
+  console.warn('3. Update .env.local with your real Firebase credentials');
+  console.warn('4. Restart the dev server');
+}
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+
+// Initialize Firebase services
+export const auth = getAuth(app);
+export const db = getFirestore(app);
+export const storage = getStorage(app);
+
+export default app;
+

@@ -1,7 +1,7 @@
 import { useState } from "react"
 import { motion } from "framer-motion"
 import { darkColor, lightColor } from "../constants"
-import { X, Menu } from "lucide-react"
+import { X, Menu,} from "lucide-react"
 
 // import { a } from "framer-motion/client"
 
@@ -9,6 +9,7 @@ const navLinks = [
   { name: 'Home', link: "#home" },
   { name: 'About', link: "#about" },
   { name: 'Skills', link: "#skills" },
+  { name: 'Projects', link: "#projects" },
   { name: 'Experience', link: "#experience" },
   { name: 'Contact', link: "#contact" },
 ];
@@ -86,6 +87,7 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
               className={`hidden lg:block px-6 py-2 font-semibold rounded-full bg-linear-to-r ${colors.button} text-white shadow-md hover:shadow-lg transform-shadow`}
             >Hire Me
             </motion.a>
+
           </div>
 
           {/* mobile menu */}
