@@ -1,28 +1,38 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { motion } from "framer-motion"
-import { darkColor, lightColor } from "../constants"
-import { X, Menu,} from "lucide-react"
-
-// import { a } from "framer-motion/client"
-
-const navLinks = [
-  { name: 'Home', link: "#home" },
-  { name: 'About', link: "#about" },
-  { name: 'Skills', link: "#skills" },
-  { name: 'Projects', link: "#projects" },
-  { name: 'Experience', link: "#experience" },
-  { name: 'Contact', link: "#contact" },
-];
+import { darkColor, lightColor, navLinks } from "../constants"
+import { X, Menu } from "lucide-react"
 
 const Navbar = ({ darkMode, toggleDarkMode }) => {
   const [activeSection, setActiveSection] = useState("home")
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   const colors = darkMode ? darkColor : lightColor;
+
   const handleNavClick = (itemsName) => {
     setActiveSection(itemsName.toLowerCase());
     setIsMenuOpen(false);
   };
+
+  useEffect(() => {
+    const sectionElements = navLinks
+      .map((link) => document.querySelector(link.link))
+      .filter(Boolean);
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveSection(entry.target.id);
+          }
+        });
+      },
+      { rootMargin: "-20% 0px -60% 0px" }
+    );
+
+    sectionElements.forEach((el) => observer.observe(el));
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <div className="flex justify-center w-full fixed top-0 z-50 mt-4">
@@ -81,7 +91,10 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
             </motion.button> */}
             {/* Resume */}
             <motion.a
-              href="#contact"
+              href="/RakshitRajResume2.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              download="Rakshit_Raj_Resume.pdf"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className={`hidden lg:block px-6 py-2 font-semibold rounded-full bg-linear-to-r ${colors.button} text-white shadow-md hover:shadow-lg transform-shadow`}
@@ -139,13 +152,14 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
                       </motion.div>
                     </a>))}
                     <motion.a
-                    href="#contact"
+                    href="/RakshitRajResume2.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    download="Rakshit_Raj_Resume.pdf"
                     onClick={()=> setIsMenuOpen(false)}
                     whileTap={{scale:0.95}}
                     className={`block px-4 py-3 text-center font-semibold rounded-lg bg-linear-to-r ${colors.button} text-white shadow-md   `}
                     >Hire me</motion.a>
-
-
               </div>
 
           </motion.div>

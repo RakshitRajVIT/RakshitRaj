@@ -1,8 +1,9 @@
 const navLinks = [
   { name: "Home", link: "#home" },
-  { name: "About", link: "#home" },
-  { name: "Skills", link: "#home" },
-  { name: "Experience", link: "#home" },  { name: "Contact", link: "#home" },
+  { name: "About", link: "#about" },
+  { name: "Projects", link: "#projects" },
+  { name: "Experience", link: "#experience" },
+  { name: "Contact", link: "#contact" },
 ];
 
 const darkColor = {

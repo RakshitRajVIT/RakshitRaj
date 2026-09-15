@@ -94,7 +94,7 @@ body {
 }
 
 .section-spacing {
-  @apply min-h-screen mt-20 md:mt-30;
+  @apply min-h-screen mt-20 md:mt-30 scroll-mt-24;
 }
 
 .text-heading {
