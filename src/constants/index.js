@@ -23,7 +23,7 @@ const lightColor = {
   indicator: "from-orange-500 to-amber-500",
   button: "from-orange-500 to-amber-500",
 };
-export const myProjects = [
+const myProjects = [
   {
     id: 1,
     title: "Google Developer Groups on Campus ",
@@ -175,4 +175,68 @@ export const myProjects = [
 
 ];
 
-export { navLinks, lightColor, darkColor };
+const experiences = [
+  {
+    title: "Freelance Web Developer",
+    job: "Freelance",
+    date: "April 2026 - Present",
+    contents: [
+      "Developed and deployed 5+ production websites for local businesses using React, Firebase, and Tailwind CSS.",
+      "Built MyBuxar, a local services directory listing 150+ businesses across 25+ services, used by 200+ residents.",
+      "Designed responsive websites for Verma Family Restaurant, Eat & Street Restaurant, and a local cake shop.",
+      "Collaborated directly with clients from requirement gathering through development, deployment, and revisions.",
+    ],
+  },
+  {
+    title: "Web Development Team Member",
+    job: "GDGC VIT Bhopal",
+    date: "2026",
+    contents: [
+      "Developed the official website for Advitya Fest, serving 500+ attendees with an interactive event experience.",
+      "Implemented parallax scrolling and custom animations to enhance the website's visual experience.",
+      "Built responsive layouts and modern frontend interactions for seamless cross-device usability.",
+      "Optimized website performance, achieving an approximately 1.1s load time.",
+    ],
+  },
+  {
+    title: "Technical Co-Lead",
+    job: "Matrix - The Multimedia Club",
+    date: "2026",
+    contents: [
+      "Led a web development team of 15+ developers building internal tools and public platforms.",
+      "Developed a task management application used by 80+ club members to manage activities and project workflows.",
+      "Designed and developed the club's official website and a Linktree-style platform.",
+      "Increased social engagement click-throughs by 47% through the Linktree-style platform.",
+    ],
+  },
+  {
+    title: "GSSoC Contributor",
+    job: "Open Source",
+    date: "2026",
+    contents: [
+      "Integrated the Gemini API into an AI-driven public health chatbot for dynamic, real-time responses.",
+      "Implemented dark mode and restructured the backend architecture of StudyMatePlus.",
+      "Contributed to open-source projects through GirlScript Summer of Code.",
+    ],
+  },
+];
+
+const mySocials = [
+  {
+    name: "Github",
+    href: "https://github.com/rakshitrajvit/",
+    icon: "/assets/logos/github.svg",
+  },
+  {
+    name: "Linkedin",
+    href: "https://www.linkedin.com/in/rakshitrajvit/",
+    icon: "/assets/logos/linkedin.png",
+  },
+  {
+    name: "Instagram",
+    href: "https://www.instagram.com/rakshit.init/",
+    icon: "/assets/logos/instagram.jfif",
+  },
+];
+
+export { navLinks, lightColor, darkColor, myProjects, experiences, mySocials };
